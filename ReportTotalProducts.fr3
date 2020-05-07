@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<TfrxReport Version="4.13.2" DotMatrixReport="False" IniFile="\Software\Fast Reports" PreviewOptions.Buttons="4095" PreviewOptions.Zoom="1" PrintOptions.Printer="Default" PrintOptions.PrintOnSheet="0" ReportOptions.CreateDate="43957,868394919" ReportOptions.Description.Text="" ReportOptions.LastChange="43958,0530917824" ScriptLanguage="PascalScript" ScriptText.Text="&#13;&#10;begin&#13;&#10;&#13;&#10;end." PropData="044C656674023003546F7002580844617461736574730101063420446174615365743D22667278444244617461736574312220446174615365744E616D653D2266727844424461746173657431220000095661726961626C65730101060E204E616D653D222044617465732200010611204E616D653D2244617465426567696E220001060F204E616D653D2244617465456E64220000055374796C650100">
+  <TfrxDataPage Name="Data" Height="1000" Left="0" Top="0" Width="1000"/>
+  <TfrxReportPage Name="Page1" PaperWidth="210" PaperHeight="297" PaperSize="9" LeftMargin="10" RightMargin="10" TopMargin="10" BottomMargin="10" ColumnWidth="0" ColumnPositions.Text="" HGuides.Text="" VGuides.Text="">
+    <TfrxReportTitle Name="ReportTitle1" Height="83,37013" Left="0" Top="18,89765" Width="718,1107" Child="Child1">
+      <TfrxSysMemoView Name="SysMemo1" Left="630,96104" Top="2" Width="83,14966" Height="18,89765" ShowHint="False" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Verdana" Font.Style="0" HAlign="haCenter" ParentFont="False" Text="[DATE]"/>
+      <TfrxMemoView Name="Memo2" Align="baCenter" Left="111,496135" Top="4" Width="495,11843" Height="79,37013" ShowHint="False" AutoWidth="True" Font.Charset="1" Font.Color="0" Font.Height="-19" Font.Name="Verdana" Font.Style="1" HAlign="haCenter" ParentFont="False" VAlign="vaCenter" Text="Products acceptances by suppliers with totals by weight and cost"/>
+    </TfrxReportTitle>
+    <TfrxMasterData Name="MasterData1" Height="64,25201" Left="0" Top="294,80334" Width="718,1107" ColumnWidth="0" ColumnGap="0" DataSet="frxDBDataset1" DataSetName="frxDBDataset1" RowCount="0">
+      <TfrxMemoView Name="frxDBDataset1typesname" Left="3,77953" Top="15,11812" Width="105,82684" Height="18,89765" ShowHint="False" DataField="types.name" DataSet="frxDBDataset1" DataSetName="frxDBDataset1" Text="[frxDBDataset1.&#34;types.name&#34;]"/>
+      <TfrxMemoView Name="frxDBDataset1sort" Left="128,50402" Top="15,11812" Width="52,91342" Height="18,89765" ShowHint="False" DataField="sort" DataSet="frxDBDataset1" DataSetName="frxDBDataset1" Text="[frxDBDataset1.&#34;sort&#34;]"/>
+      <TfrxMemoView Name="frxDBDataset1suppliersname" Left="234,33086" Top="15,11812" Width="86,92919" Height="18,89765" ShowHint="False" DataField="suppliers.name" DataSet="frxDBDataset1" DataSetName="frxDBDataset1" Text="[frxDBDataset1.&#34;suppliers.name&#34;]"/>
+      <TfrxMemoView Name="frxDBDataset1INN" Left="381,73253" Top="15,11812" Width="94,48825" Height="18,89765" ShowHint="False" DataField="INN" DataSet="frxDBDataset1" DataSetName="frxDBDataset1" Text="[frxDBDataset1.&#34;INN&#34;]"/>
+      <TfrxMemoView Name="frxDBDataset1Sumweight" Left="521,57514" Top="15,11812" Width="79,37013" Height="18,89765" ShowHint="False" DataField="Sum-Sum-weight" DataSet="frxDBDataset1" DataSetName="frxDBDataset1" Text="[frxDBDataset1.&#34;Sum-Sum-weight&#34;]"/>
+      <TfrxMemoView Name="frxDBDataset1Totalcost" Left="631,18151" Top="15,11812" Width="79,37013" Height="18,89765" ShowHint="False" DataField="Sum-Total cost" DataSet="frxDBDataset1" DataSetName="frxDBDataset1" Text="[frxDBDataset1.&#34;Sum-Total cost&#34;]"/>
+    </TfrxMasterData>
+    <TfrxPageFooter Name="PageFooter1" Height="22,67718" Left="0" Top="419,52783" Width="718,1107">
+      <TfrxMemoView Name="Memo1" Left="642,5201" Top="0" Width="75,5906" Height="18,89765" ShowHint="False" HAlign="haRight" Text="[Page#]"/>
+    </TfrxPageFooter>
+    <TfrxChild Name="Child1" Height="22,67718" Left="0" Top="124,72449" Width="718,1107">
+      <TfrxMemoView Name="LDateBegin" Align="baCenter" Left="139,84261" Top="0" Width="438,42548" Height="18,89765" ShowHint="False" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Verdana" Font.Style="1" HAlign="haCenter" ParentFont="False" Text="[DateBegin] - [DateEnd]"/>
+    </TfrxChild>
+    <TfrxHeader Name="Header1" Height="64,25201" Left="0" Top="207,87415" Width="718,1107">
+      <TfrxMemoView Name="Memo3" Align="baLeft" Left="0" Top="19,23624" Width="94,48825" Height="30,23624" ShowHint="False" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Verdana" Font.Style="5" HAlign="haCenter" ParentFont="False" Text="Product"/>
+      <TfrxMemoView Name="Memo4" Left="102,04731" Top="19,23624" Width="94,48825" Height="26,45671" ShowHint="False" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Verdana" Font.Style="5" HAlign="haCenter" ParentFont="False" Text="Sort"/>
+      <TfrxMemoView Name="Memo5" Left="226,7718" Top="15,45671" Width="94,48825" Height="22,67718" ShowHint="False" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Verdana" Font.Style="5" HAlign="haCenter" ParentFont="False" Text="Supplier"/>
+      <TfrxMemoView Name="Memo7" Left="612,28386" Top="18,89765" Width="94,48825" Height="26,45671" ShowHint="False" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Verdana" Font.Style="5" HAlign="haCenter" ParentFont="False" Text="Total cost"/>
+      <TfrxMemoView Name="Memo8" Left="381,73253" Top="19,23624" Width="60,47248" Height="22,67718" ShowHint="False" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Verdana" Font.Style="5" HAlign="haCenter" ParentFont="False" Text="INN"/>
+      <TfrxMemoView Name="Memo6" Left="517,79561" Top="11,33859" Width="71,81107" Height="41,57483" ShowHint="False" Font.Charset="1" Font.Color="0" Font.Height="-16" Font.Name="Verdana" Font.Style="5" HAlign="haCenter" ParentFont="False" Text="Total weight"/>
+    </TfrxHeader>
+  </TfrxReportPage>
+</TfrxReport>

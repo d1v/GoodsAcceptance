@@ -1,0 +1,121 @@
+object FormItemEdit: TFormItemEdit
+  Left = 0
+  Top = 0
+  BorderStyle = bsDialog
+  Caption = 'Item Edit'
+  ClientHeight = 122
+  ClientWidth = 444
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnClose = FormClose
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object LabelProduct: TLabel
+    Left = 0
+    Top = 2
+    Width = 444
+    Height = 18
+    Align = alBottom
+    Alignment = taCenter
+    Caption = 'Product:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Verdana'
+    Font.Style = []
+    ParentFont = False
+    ExplicitWidth = 68
+  end
+  object LabelPrice: TLabel
+    Left = 0
+    Top = 46
+    Width = 444
+    Height = 18
+    Align = alBottom
+    Alignment = taCenter
+    Caption = 'Weight:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Verdana'
+    Font.Style = []
+    ParentFont = False
+    ExplicitWidth = 66
+  end
+  object EditWeight: TEdit
+    Left = 0
+    Top = 64
+    Width = 444
+    Height = 26
+    Align = alBottom
+    Alignment = taCenter
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Verdana'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 0
+    OnKeyPress = EditWeightKeyPress
+  end
+  object ButtonEdit: TButton
+    Left = 0
+    Top = 90
+    Width = 444
+    Height = 32
+    Align = alBottom
+    Caption = 'OK'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Verdana'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 1
+    OnClick = ButtonEditClick
+  end
+  object DBLookupComboBoxType: TDBLookupComboBox
+    Left = 0
+    Top = 20
+    Width = 444
+    Height = 26
+    Align = alBottom
+    DropDownRows = 20
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Verdana'
+    Font.Style = []
+    KeyField = 'sort'
+    ListField = 'sort;name'
+    ListFieldIndex = 2
+    ListSource = DataSourceProduct
+    ParentFont = False
+    TabOrder = 2
+  end
+  object ADOQueryProduct: TADOQuery
+    Active = True
+    Connection = DbMainModule.ADOConnection1
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'SELECT products.id, types.name, products.sort FROM products'
+      'INNER JOIN types ON products.idType = types.id'
+      'ORDER BY types.name')
+    Left = 288
+    Top = 8
+  end
+  object DataSourceProduct: TDataSource
+    AutoEdit = False
+    DataSet = ADOQueryProduct
+    Left = 384
+    Top = 8
+  end
+end
